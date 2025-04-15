@@ -1,0 +1,29 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+{% block contents %}
+
+<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7 col-md-10 col-12">
+                <div class="card shadow-sm p-4">
+                    <h2 class="text-center mb-4">Model Performance</h2>
+                    <table class="table table-bordered table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Accuracy</th>
+                                <td>{{ acc }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Loss</th>
+                                <td>{{ loss }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

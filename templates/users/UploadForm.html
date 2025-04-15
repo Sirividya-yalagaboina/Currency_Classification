@@ -1,0 +1,38 @@
+{% extends 'users/userbase.html' %}
+{% load static %}
+{% block contents %}
+
+<section class="we-do py-5">
+    <div class="container">
+        <div class="we-do-details">
+            <div class="section-header text-center mb-5">
+                <h2>Test User Input</h2>
+                <p class="lead">Upload an image for testing the user input and see the prediction results below.</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <form action="{% url 'UserPredictions' %}" enctype="multipart/form-data" method="POST" class="w-50">
+                    {% csrf_token %}
+                    <div class="form-group mb-4">
+                        <label for="fileInput" class="form-label"><strong>Select an Image</strong></label>
+                        <input type="file" name="file" id="fileInput" class="form-control" accept="image/gif, image/jpeg, image/png" required>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary text-white py-2 px-4" type="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
+
+            {% if result %}
+            <div class="text-center mt-5">
+                <h4>Result: <span class="text-danger">{{result}}</span></h4>
+                {% if path %}
+                <!-- <img src="{{ path }}" class="img-fluid mt-3" alt="Uploaded Image" style="max-width: 100%; height: auto;"> -->
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

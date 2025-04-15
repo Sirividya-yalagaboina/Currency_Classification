@@ -1,0 +1,47 @@
+{% extends 'admins/adminbase.html' %}
+{% load static %}
+{% block contents %}
+
+<div class="container mt-4">
+    <h2 class="text-center">Currency Information</h2>
+    
+    <div class="row">
+        <!-- Real Currency Card -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">Real Currency</h5>
+                </div>
+                <div class="card-body">
+                    <p>Real currency is an officially issued form of money that is recognized as legal tender by a government. Examples include the US Dollar (USD), Euro (EUR), and Japanese Yen (JPY).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fake Currency Card -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">Fake Currency</h5>
+                </div>
+                <div class="card-body">
+                    <p>Fake currency refers to counterfeit money, which is produced illegally and designed to imitate real currency. Using or distributing fake currency is a criminal offense.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Currency Comparison Card -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title">Currency Comparison</h5>
+                </div>
+                <div class="card-body">
+                    <p>The primary difference between real currency and fake currency is legitimacy. Real currency is authorized by a governing body, while fake currency lacks official endorsement and can lead to legal consequences for those who use it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
